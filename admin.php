@@ -71,7 +71,6 @@ if (!isset($_SESSION['is_admin']) || $_SESSION['is_admin'] !== true) {
                     <?php echo "Admin" ?>
                 </button>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="settings.php">Settings</a></li>
                     <li><a class="dropdown-item" href="signout.php">Sign Out</a></li>
                 </ul>
             </div>
@@ -79,7 +78,7 @@ if (!isset($_SESSION['is_admin']) || $_SESSION['is_admin'] !== true) {
     </div>
 
     <div class="container">
-        <h2 class="text-center mb-4">User  Details</h2>
+        <h2 class="text-center mb-4">User Details</h2>
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -93,6 +92,7 @@ if (!isset($_SESSION['is_admin']) || $_SESSION['is_admin'] !== true) {
                     <th>City</th>
                     <th>State</th>
                     <th>Country</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -114,10 +114,11 @@ if (!isset($_SESSION['is_admin']) || $_SESSION['is_admin'] !== true) {
                         echo "<td>" . $row['city'] . "</td>";
                         echo "<td>" . $row['state'] . "</td>";
                         echo "<td>" . $row['country'] . "</td>";
+                        echo "<td><a href='delete_user.php?id=" . $row['id'] . "' class='btn btn-danger'>Delete</a></td>";
                         echo "</tr>";
                     }
                 } else {
-                    echo "<tr><td colspan='10'>No users found</td></tr>";
+                    echo "<tr><td colspan='11'>No users found</td></tr>";
                 }
 
                 $conn->close();
