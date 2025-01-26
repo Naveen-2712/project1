@@ -1,0 +1,21 @@
+body {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: #fff;
+    font-family: Arial, sans-serif;
+    display: flex; /* Use Flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default margin */
+}
+
+.container {
+    width: 100%; /* Full width */
+    max-width: 400px; /* Set a maximum width */
+    margin: 0 auto; /* Center horizontally */
+    padding: 2rem; /* Add padding */
+    background: #fff;
+    color: #000;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
